@@ -1,0 +1,635 @@
+Python  was created by Guido van Rossum, and released in 1991.
+It is used for:
+•	web development (server-side),
+•	software development,
+•	mathematics,
+•	system scripting
+
+Python Install
+Many PCs and Macs will have python already installed.
+To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):
+C:\Users\Your Name>python --version
+To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:
+python --version
+If you find that you do not have python installed on your computer, then you can download it for free from the following website: https://www.python.org/
+________________________________________
+Python Quickstart
+Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.
+The way to run a python file is like this on the command line:
+C:\Users\Your Name>python helloworld.py
+Where "helloworld.py" is the name of your python file.
+Let's write our first Python file, called helloworld.py, which can be done in any text editor.
+helloworld.py
+print("Hello, World!")
+Try it Yourself »
+Simple as that. Save your file. Open your command line, navigate to the directory where you saved your file, and run:
+C:\Users\Your Name>python helloworld.py
+The output should read:
+Hello, World!
+Congratulations, you have written and executed your first Python program.
+The Python Command Line
+To test a short amount of code in python sometimes it is quickest and easiest not to write the code in a file. This is made possible because Python can be run as a command line itself.
+Type the following on the Windows, Mac or Linux command line:
+C:\Users\Your Name>python
+Or, if the "python" command did not work, you can try "py":
+C:\Users\Your Name>py
+From there you can write any python, including our hello world example from earlier in the tutorial:
+C:\Users\Your Name>python
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print("Hello, World!")
+Which will write "Hello, World!" in the command line:
+C:\Users\Your Name>python
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print("Hello, World!")
+Hello, World!
+Whenever you are done in the python command line, you can simply type the following to quit the python command line interface:
+exit()
+Execute Python Syntax
+As we learned in the previous page, Python syntax can be executed by writing directly in the Command Line:
+>>> print("Hello, World!")
+Hello, World!
+Or by creating a python file on the server, using the .py file extension, and running it in the Command Line:
+C:\Users\Your Name>python myfile.py
+________________________________________
+Python Indentation
+Indentation refers to the spaces at the beginning of a code line.
+Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.
+Python uses indentation to indicate a block of code.
+Example
+if 5 > 2:
+  print("Five is greater than two!")
+Try it Yourself »
+Python will give you an error if you skip the indentation:
+Example
+Syntax Error:
+if 5 > 2:
+print("Five is greater than two!")
+Try it Yourself »
+The number of spaces is up to you as a programmer, but it has to be at least one.
+Example
+if 5 > 2:
+ print("Five is greater than two!") 
+if 5 > 2:
+        print("Five is greater than two!") 
+Try it Yourself »
+You have to use the same number of spaces in the same block of code, otherwise Python will give you an error:
+Example
+Syntax Error:
+if 5 > 2:
+ print("Five is greater than two!")
+        print("Five is greater than two!")
+Try it Yourself »
+Question answer
+Use a multiline string to make the a multi line comment:
+
+ 
+This is a comment
+written in 
+more that just one line
+ 
+Triple quoute is the answer 
+Python Comments
+❮ PreviousNext ❯
+________________________________________
+Comments can be used to explain Python code.
+Comments can be used to make the code more readable.
+Comments can be used to prevent execution when testing code.
+________________________________________
+Creating a Comment
+Comments starts with a #, and Python will ignore them:
+Example
+#This is a comment
+print("Hello, World!")
+Try it Yourself »
+Comments can be placed at the end of a line, and Python will ignore the rest of the line:
+Example
+print("Hello, World!") #This is a comment
+Try it Yourself »
+Comments does not have to be text to explain the code, it can also be used to prevent Python from executing code:
+Example
+#print("Hello, World!")
+print("Cheers, Mate!")
+Multi Line Comments
+Python does not really have a syntax for multi line comments.
+To add a multiline comment you could insert a # for each line:
+Example
+#This is a comment
+#written in
+#more than just one line
+print("Hello, World!")
+Try it Yourself »
+Or, not quite as intended, you can use a multiline string.
+Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it:
+Example
+"""
+This is a comment
+written in
+more than just one line
+"""
+print("Hello, World!")
+Try it Yourself »
+As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you have made a multiline comment.
+Python Variables
+❮ PreviousNext ❯
+________________________________________
+Creating Variables
+Variables are containers for storing data values.
+Unlike other programming languages, Python has no command for declaring a variable.
+A variable is created the moment you first assign a value to it.
+Example
+x = 5
+y = "John"
+print(x)
+print(y)
+Try it Yourself »
+Variables do not need to be declared with any particular type, and can even change type after they have been set.
+Example
+x = 4 # x is of type int
+x = "Sally" # x is now of type str
+print(x)
+Try it Yourself »
+String variables can be declared either by using single or double quotes:
+Example
+x = "John"
+# is the same as
+x = 'John'
+Try it Yourself »
+Python Data Types
+❮ PreviousNext ❯
+________________________________________
+Built-in Data Types
+In programming, data type is an important concept.
+Variables can store data of different types, and different types can do different things.
+Python has the following data types built-in by default, in these categories:
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+________________________________________
+Getting the Data Type
+You can get the data type of any object by using the type() function:
+Example
+Print the data type of the variable x:
+x = 5
+print(type(x))
+Try it Yourself »
+________________________________________
+Setting the Data Type
+In Python, the data type is set when you assign a value to a variable:
+Example	Data Type	Try it
+x = "Hello World"	str	Try it »
+
+x = 20	int	Try it »
+
+x = 20.5	float	Try it »
+
+x = 1j	complex	Try it »
+
+x = ["apple", "banana", "cherry"]	list	Try it »
+
+x = ("apple", "banana", "cherry")	tuple	Try it »
+
+x = range(6)	range	Try it »
+
+x = {"name" : "John", "age" : 36}	dict	Try it »
+
+x = {"apple", "banana", "cherry"}	set	Try it »
+
+x = frozenset({"apple", "banana", "cherry"})	frozenset	Try it »
+
+x = True	bool	Try it »
+
+x = b"Hello"	bytes	Try it »
+
+x = bytearray(5)	bytearray	Try it »
+
+x = memoryview(bytes(5))	memoryview	
+Setting the Specific Data Type
+If you want to specify the data type, you can use the following constructor functions:
+Example	Data Type	Try it
+x = str("Hello World")	str	Try it »
+
+x = int(20)	int	Try it »
+
+x = float(20.5)	float	Try it »
+
+x = complex(1j)	complex	Try it »
+
+x = list(("apple", "banana", "cherry"))	list	Try it »
+
+x = tuple(("apple", "banana", "cherry"))	tuple	Try it »
+
+x = range(6)	range	Try it »
+
+x = dict(name="John", age=36)	dict	Try it »
+
+x = set(("apple", "banana", "cherry"))	set	Try it »
+
+x = frozenset(("apple", "banana", "cherry"))	frozenset	Try it »
+
+x = bool(5)	bool	Try it »
+
+x = bytes(5)	bytes	Try it »
+
+x = bytearray(5)	bytearray	Try it »
+
+x = memoryview(bytes(5))	memoryview	Try it »
+
+Python Numbers
+❮ PreviousNext ❯
+________________________________________
+Python Numbers
+There are three numeric types in Python:
+•	int
+•	float
+•	complex
+Variables of numeric types are created when you assign a value to them:
+Example
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+
+To verify the type of any object in Python, use the type() function:
+Example
+print(type(x))
+print(type(y))
+print(type(z))
+
+Try it Yourself »
+________________________________________
+Int
+Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
+Example
+Integers:
+x = 1
+y = 35656222554887711
+z = -3255522
+
+print(type(x))
+print(type(y))
+print(type(z))
+Try it Yourself »
+________________________________________
+Float
+Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
+Example
+Floats:
+x = 1.10
+y = 1.0
+z = -35.59
+
+print(type(x))
+print(type(y))
+print(type(z))
+Try it Yourself »
+Float can also be scientific numbers with an "e" to indicate the power of 10.
+Example
+Floats:
+x = 35e3
+y = 12E4
+z = -87.7e100
+
+print(type(x))
+print(type(y))
+print(type(z))
+Try it Yourself »
+________________________________________
+________________________________________
+Complex
+Complex numbers are written with a "j" as the imaginary part:
+Example
+Complex:
+x = 3+5j
+y = 5j
+z = -5j
+
+print(type(x))
+print(type(y))
+print(type(z))
+Try it Yourself »
+________________________________________
+Type Conversion
+You can convert from one type to another with the int(), float(), and complex() methods:
+Example
+Convert from one type to another:
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+
+#convert from int to float:
+a = float(x)
+
+#convert from float to int:
+b = int(y)
+
+#convert from int to complex:
+c = complex(x)
+
+print(a)
+print(b)
+print(c)
+
+print(type(a))
+print(type(b))
+print(type(c))
+Try it Yourself »
+Note: You cannot convert complex numbers into another number type.
+________________________________________
+Random Number
+Python does not have a random() function to make a random number, but Python has a built-in module called random that can be used to make random numbers:
+Example
+Import the random module, and display a random number between 1 and 9:
+import random
+
+print(random.randrange(1, 10))
+Python Strings
+❮ PreviousNext ❯
+________________________________________
+String Literals
+String literals in python are surrounded by either single quotation marks, or double quotation marks.
+'hello' is the same as "hello".
+You can display a string literal with the print() function:
+Example
+print("Hello")
+print('Hello')
+Try it Yourself »
+________________________________________
+Assign String to a Variable
+Assigning a string to a variable is done with the variable name followed by an equal sign and the string:
+Example
+a = "Hello"
+print(a)
+Try it Yourself »
+________________________________________
+Multiline Strings
+You can assign a multiline string to a variable by using three quotes:
+Example
+You can use three double quotes:
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
+Try it Yourself »
+Or three single quotes:
+Example
+a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+print(a)
+Try it Yourself »
+Note: in the result, the line breaks are inserted at the same position as in the code.
+Strings are Arrays
+Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.
+However, Python does not have a character data type, a single character is simply a string with a length of 1.
+Square brackets can be used to access elements of the string.
+Example
+Get the character at position 1 (remember that the first character has the position 0):
+a = "Hello, World!"
+print(a[1])
+Try it Yourself »
+Slicing
+You can return a range of characters by using the slice syntax.
+Specify the start index and the end index, separated by a colon, to return a part of the string.
+Example
+Get the characters from position 2 to position 5 (not included):
+b = "Hello, World!"
+print(b[2:5])
+Try it Yourself »
+Negative Indexing
+Use negative indexes to start the slice from the end of the string:
+Example
+Get the characters from position 5 to position 1 (not included), starting the count from the end of the string:
+b = "Hello, World!"
+print(b[-5:-2])
+Try it Yourself »
+String Length
+To get the length of a string, use the len() function.
+Example
+The len() function returns the length of a string:
+a = "Hello, World!"
+print(len(a))
+Try it Yourself »
+________________________________________
+String Methods
+Python has a set of built-in methods that you can use on strings.
+Example
+The strip() method removes any whitespace from the beginning or the end:
+a = " Hello, World! "
+print(a.strip()) # returns "Hello, World!"
+Try it Yourself »
+Example
+The lower() method returns the string in lower case:
+a = "Hello, World!"
+print(a.lower())
+Try it Yourself »
+Example
+The upper() method returns the string in upper case:
+a = "Hello, World!"
+print(a.upper())
+Try it Yourself »
+Example
+The replace() method replaces a string with another string:
+a = "Hello, World!"
+print(a.replace("H", "J"))
+Try it Yourself »
+Example
+The split() method splits the string into substrings if it finds instances of the separator:
+a = "Hello, World!"
+print(a.split(",")) # returns ['Hello', ' World!']
+Try it Yourself »
+Learn more about String Methods with our String Methods Reference
+________________________________________
+Check String
+To check if a certain phrase or character is present in a string, we can use the keywords in or not in.
+Example
+Check if the phrase "ain" is present in the following text:
+txt = "The rain in Spain stays mainly in the plain"
+x = "ain" in txt
+print(x)
+Try it Yourself »
+Example
+Check if the phrase "ain" is NOT present in the following text:
+txt = "The rain in Spain stays mainly in the plain"
+x = "ain" not in txt
+print(x) 
+Try it Yourself »
+________________________________________
+String Concatenation
+To concatenate, or combine, two strings you can use the + operator.
+Example
+Merge variable a with variable b into variable c:
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+Try it Yourself »
+Example
+To add a space between them, add a " ":
+a = "Hello"
+b = "World"
+c = a + " " + b
+print(c)
+Try it Yourself »
+________________________________________
+String Format
+As we learned in the Python Variables chapter, we cannot combine strings and numbers like this:
+Example
+age = 36
+txt = "My name is John, I am " + age
+print(txt)
+Try it Yourself »
+But we can combine strings and numbers by using the format() method!
+The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are:
+Example
+Use the format() method to insert numbers into strings:
+age = 36
+txt = "My name is John, and I am {}"
+print(txt.format(age))
+Try it Yourself »
+The format() method takes unlimited number of arguments, and are placed into the respective placeholders:
+Example
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want {} pieces of item {} for {} dollars."
+print(myorder.format(quantity, itemno, price))
+Try it Yourself »
+You can use index numbers {0} to be sure the arguments are placed in the correct placeholders:
+Example
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
+print(myorder.format(quantity, itemno, price))
+Try it Yourself »
+________________________________________
+Escape Character
+To insert characters that are illegal in a string, use an escape character.
+An escape character is a backslash \ followed by the character you want to insert.
+An example of an illegal character is a double quote inside a string that is surrounded by double quotes:
+Example
+You will get an error if you use double quotes inside a string that is surrounded by double quotes:
+txt = "We are the so-called "Vikings" from the north."
+Try it Yourself »
+To fix this problem, use the escape character \":
+Example
+The escape character allows you to use double quotes when you normally would not be allowed:
+txt = "We are the so-called \"Vikings\" from the north."
+Try it Yourself »
+Other escape characters used in Python:
+Code	Result	Try it
+\'	Single Quote	Try it »
+
+\\	Backslash	Try it »
+
+\n	New Line	Try it »
+
+\r	Carriage Return	Try it »
+
+\t	Tab	Try it »
+
+\b	Backspace	Try it »
+
+\f	Form Feed	
+\ooo	Octal value	Try it »
+
+\xhh	Hex value	Try it »
+
+String Methods
+Python has a set of built-in methods that you can use on strings.
+Note: All string methods returns new values. They do not change the original string.
+Method	Description
+capitalize()
+Converts the first character to upper case
+casefold()
+Converts string into lower case
+center()
+Returns a centered string
+count()
+Returns the number of times a specified value occurs in a string
+encode()
+Returns an encoded version of the string
+endswith()
+Returns true if the string ends with the specified value
+expandtabs()
+Sets the tab size of the string
+find()
+Searches the string for a specified value and returns the position of where it was found
+format()
+Formats specified values in a string
+format_map()	Formats specified values in a string
+index()
+Searches the string for a specified value and returns the position of where it was found
+isalnum()
+Returns True if all characters in the string are alphanumeric
+isalpha()
+Returns True if all characters in the string are in the alphabet
+isdecimal()
+Returns True if all characters in the string are decimals
+isdigit()
+Returns True if all characters in the string are digits
+isidentifier()
+Returns True if the string is an identifier
+islower()
+Returns True if all characters in the string are lower case
+isnumeric()
+Returns True if all characters in the string are numeric
+isprintable()
+Returns True if all characters in the string are printable
+isspace()
+Returns True if all characters in the string are whitespaces
+istitle()
+Returns True if the string follows the rules of a title
+isupper()
+Returns True if all characters in the string are upper case
+join()
+Joins the elements of an iterable to the end of the string
+ljust()
+Returns a left justified version of the string
+lower()
+Converts a string into lower case
+lstrip()
+Returns a left trim version of the string
+maketrans()
+Returns a translation table to be used in translations
+partition()
+Returns a tuple where the string is parted into three parts
+replace()
+Returns a string where a specified value is replaced with a specified value
+rfind()
+Searches the string for a specified value and returns the last position of where it was found
+rindex()
+Searches the string for a specified value and returns the last position of where it was found
+rjust()
+Returns a right justified version of the string
+rpartition()
+Returns a tuple where the string is parted into three parts
+rsplit()
+Splits the string at the specified separator, and returns a list
+rstrip()
+Returns a right trim version of the string
+split()
+Splits the string at the specified separator, and returns a list
+splitlines()
+Splits the string at line breaks and returns a list
+startswith()
+Returns true if the string starts with the specified value
+strip()
+Returns a trimmed version of the string
+swapcase()
+Swaps cases, lower case becomes upper case and vice versa
+title()
+Converts the first character of each word to upper case
+translate()
+Returns a translated string
+upper()
+Converts a string into upper case
+zfill()
+Fills the string with a specified number of 0 values at the beginning
